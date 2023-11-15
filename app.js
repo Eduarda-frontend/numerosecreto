@@ -1,15 +1,15 @@
 const numeroSecreto = parseInt(Math.random() * 1000) + 1;
 let nome = prompt('Qual o seu nome?');
 let tentativas = 1;
-let tentativasRestantes = 12;
+let tentativasRestantes = 10;
 alert(`Fique calmo, estamos gerando um novo número para você!`)
 
 
-for (tentativas; tentativas <= 12; tentativas++) {
+for (tentativas; tentativas <= 10; tentativas++) {
     
     let palpite = prompt(`${nome}, adivinhe um número de 1 a 1000:`);
 
-    if(tentativas == 12){
+    if(tentativas == 10){
 
         alert(`Que pena ${nome} seu número de tentativas acabaram, o numero secreto era ${numeroSecreto}! Recarregue a página e tente novamente.`);
         break
