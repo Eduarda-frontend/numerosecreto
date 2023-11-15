@@ -9,28 +9,31 @@ for (tentativas; tentativas <= 10; tentativas++) {
 
     let palpite = prompt(`${nome}, adivinhe um número de 1 a 1000:`);
 
-    if (palpite <= numeroSecreto) {
+    if (palpite == numeroSecreto) {
 
-        alert(`${nome}, o número secreto é maior do que ${palpite}!`);
-        tentativasRestantes-- 
+        alert(`Parabéns ${nome}, você acertou! O número secreto é ${numeroSecreto}!`);
+        break
+        
+    }else {
 
-    } else if (palpite >= numeroSecreto) {
+        if (palpite < numeroSecreto) {
 
-        alert(`${nome}, o número secreto é menor do que ${palpite}!`);
-        tentativasRestantes-- 
+            alert (`${nome}, o número secreto é maior do que ${palpite}!`);
+            tentativasRestantes--
 
-    } else if (palpite == numeroSecreto) {
+        } else{
 
-        alert(`Parabéns você acertou! O número secreto é ${numeroSecreto}`);
-        break;
+            alert (`${nome}, o número secreto é menor do que ${palpite}!`);
+            tentativasRestantes--
+
+        }
+
+        alert(`Que pena ${nome} seu número de tentativas acabaram, o numero secreto era ${numeroSecreto}! Recarregue a página e tente novamente.`);
     }
 
     const palavraTentativas = tentativas > 1 ? "tentativas" : "tentativa";
     alert(`Você já teve ${tentativas} ${palavraTentativas}, restam apenas ${tentativasRestantes}.`);
 
 }
-
-alert(`Que pena ${nome} seu número de tentativas acabaram, o numero secreto era ${numeroSecreto}! Recarregue a página e tente novamente.`);
-
 
 
