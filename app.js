@@ -17,7 +17,7 @@ for (tentativas; tentativas <= 12; tentativas++) {
 
     if (palpite == numeroSecreto) {
 
-        alert(`Parabéns você acertou! O número secreto é ${numeroSecreto}`);
+        alert(`Parabéns ${nome}, você acertou! O número secreto é ${numeroSecreto}`);
         break
         
     }else {
