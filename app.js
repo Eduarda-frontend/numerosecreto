@@ -6,12 +6,18 @@ alert(`Fique calmo, estamos gerando um novo número para você!`)
 
 
 for (tentativas; tentativas <= 10; tentativas++) {
-
+    
     let palpite = prompt(`${nome}, adivinhe um número de 1 a 1000:`);
+
+    if(tentativas == 10){
+
+        alert(`Que pena ${nome} seu número de tentativas acabaram, o numero secreto era ${numeroSecreto}! Recarregue a página e tente novamente.`);
+        break
+    }
 
     if (palpite == numeroSecreto) {
 
-        alert(`Parabéns ${nome}, você acertou! O número secreto é ${numeroSecreto}!`);
+        alert(`Parabéns você acertou! O número secreto é ${numeroSecreto}`);
         break
         
     }else {
@@ -28,12 +34,10 @@ for (tentativas; tentativas <= 10; tentativas++) {
 
         }
 
-        alert(`Que pena ${nome} seu número de tentativas acabaram, o numero secreto era ${numeroSecreto}! Recarregue a página e tente novamente.`);
     }
-
+    
     const palavraTentativas = tentativas > 1 ? "tentativas" : "tentativa";
     alert(`Você já teve ${tentativas} ${palavraTentativas}, restam apenas ${tentativasRestantes}.`);
 
 }
-
 
